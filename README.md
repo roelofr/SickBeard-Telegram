@@ -95,7 +95,7 @@ those are often higher priority than new features.
 [shield-license]: https://img.shields.io/github/license/roelofr/Sickbeard-Telegram.svg
 
 <!-- Shield links -->
-[link-build]: https://travis-ci.org/roelofr/SickBeard-Telegram/settings
+[link-build]: https://travis-ci.org/roelofr/SickBeard-Telegram
 [link-cover]: https://coveralls.io/github/roelofr/SickBeard-Telegram
 [link-php]: https://secure.php.net/supported-versions.php
 
