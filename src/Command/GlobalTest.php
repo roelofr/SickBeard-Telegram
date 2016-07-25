@@ -19,7 +19,7 @@ class GlobalTest extends Command
     protected function configure()
     {
         $this
-            ->setName('test')
+            ->setName('test:all')
             ->setDescription('Tests both Telegram and SickBeard.');
     }
 

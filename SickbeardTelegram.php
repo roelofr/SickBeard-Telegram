@@ -32,6 +32,9 @@ if ($composerVersion !== null) {
     $app->setVersion($composerVersion);
 }
 
+// Operations
+$app->add(new HandleNotification);
+
 // Tests
 $app->add(new TelegramTest);
 $app->add(new SickBeardTest);

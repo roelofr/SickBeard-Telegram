@@ -8,7 +8,7 @@
         "irazasyed/telegram-bot-sdk": "^2.0",
         "jleagle/sick-beard-api-client": "^0.4.0"
     },
-    "version": "0.1.0",
+    "version": "0.2.0",
     "license": "GPL-3.0",
     "support": {
         "issues": "https://github.com/roelofr/SickBeard-Telegram/issues",
