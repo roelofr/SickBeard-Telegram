@@ -129,7 +129,14 @@ class HandleNotification extends Command
             $output->writeln('Validating arguments...');
         }
 
-        if ($showId === null || filter_var($showId, FILTER_VALIDATE_INT) === false) {
+        $isInt = function($x) {
+            if (is_int($x) || is_float($x) || ctype_digit($x)) {
+                return true;
+            }
+            return false;
+        };
+
+        if ($showId === null || !$isInt($showId)) {
             throw new \InvalidArgumentException(
                 'Expected show ID to be an integer, ' .
                 'but it\'s missing or not an integer.',
@@ -139,7 +146,7 @@ class HandleNotification extends Command
             $output->writeln('Show ID <info>valid</>.');
         }
 
-        if ($seasonNo === null || filter_var($seasonNo, FILTER_VALIDATE_INT) === false) {
+        if ($seasonNo === null || !$isInt($seasonNo)) {
             throw new \InvalidArgumentException(
                 'Expected season number to be an integer, ' .
                 'but it\'s missing or not an integer.',
@@ -149,7 +156,7 @@ class HandleNotification extends Command
             $output->writeln('Season number <info>valid</>.');
         }
 
-        if ($episodeNo === null || filter_var($episodeNo, FILTER_VALIDATE_INT) === false) {
+        if ($episodeNo === null || !$isInt($episodeNo)) {
             throw new \InvalidArgumentException(
                 'Expected episode to be an integer, ' .
                 'but it\'s missing or not an integer.',
