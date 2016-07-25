@@ -1,5 +1,4 @@
 {
     "api-key": null,
-    "host": "http://example.com",
-    "root": "/"
+    "url": "http://example.com/"
 }

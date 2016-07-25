@@ -2,7 +2,7 @@
 
 [![Build status][shield-build]][link-build]
 [![Code coverage][shield-cover]][link-cover]
-[![PHP 5.6+][shield-php]][link-php]
+[![PHP 5.6+][shield-php]][php]
 [![GPL-v3 license][shield-license]][license]
 
 Reports SickBeard downloads to you or a Telegram group using the Telegram Bot
@@ -10,11 +10,22 @@ API.
 
 ## Requirements
 
- - PHP 5.6 or higher (5.5 and lower not officially supported)
- - Composer
+ - [PHP 5.6 or higher][php] (5.5 and lower not officially supported)
+ - [Composer][composer]
  - cURL
 
 ## Installation
+
+### Installing dependancies
+
+This project uses some dependancies such as Guzzle and the Telegram API SDK.
+These don't come pre-packed (that'd be bad practice on GitHub), and have to be
+manually installed using [Composer][composer].
+
+To do this, simply open a terminal and enter the following command:
+```shell
+composer install
+```
 
 ### Creating a bot.
 
@@ -36,11 +47,12 @@ respectively.
 
 The recommended contents of `sickbeard.json` and `telegram.json`:
 
-`sickbeard.json`:
+#### `sickbeard.json`
  -  `api-key` - The API key to connect with
- -  `host` - The hostname the server is available at, with protocol.
+ -  `url` - The location of the server, including protocol and base path (in
+    case you're using `mod_rewrite` or sorts)
 
-`telegram.json`:
+#### `telegram.json`
  -  `token` - The access token, as received from [@BotFather][]
  -  `target` - An array of chats that should recieve updates. You can use the
     [@MyIdBot][] to get the ID of a user or group chat. Each chat will receive
@@ -65,8 +77,9 @@ To make sure everything works, you can use the tests built into the app.
 
 ### Enabling it
 
-Since this isn't a built-in plugin for SickBeard, you'll need to edit your
-`config.ini` and add the `app` file to your `extra_scripts` config property.
+Since this isn't a built-in plugin for SickBeard, you'll need to edit
+SickBeard's `config.ini` and add the `app` file to your `extra_scripts` config
+property.
 
 **Important:** You'll need to make this change when SickBeard is *not* running.
 If you change it while SickBeard is running, your changes will be disregarded.
@@ -79,12 +92,12 @@ extra_scripts = "/path/to/repository/app"
 
 ## License
 
-The program is licensed under [GPL-v3][license].
+The program is licensed under the [GNU General Public License 3.0][license].
 
 ## Contributing
 
-You're free to contribute. Please see the [styleguide][] for coding standards
-and please use an editor that adheres to `.editorconfig` files, or
+You're very welcome to contribute. Please see the [styleguide][] for coding
+standards and please use an editor that adheres to `.editorconfig` files, or
 [install a plugin][editorconfig]. Please pick up issues if there are any, as
 those are often higher priority than new features.
 
@@ -97,14 +110,15 @@ those are often higher priority than new features.
 <!-- Shield links -->
 [link-build]: https://travis-ci.org/roelofr/SickBeard-Telegram
 [link-cover]: https://coveralls.io/github/roelofr/SickBeard-Telegram
-[link-php]: https://secure.php.net/supported-versions.php
 
 <!-- Telegram chats -->
 [@BotFather]: https://telegram.me/BotFather
 [@MyIdBot]: https://telegram.me/MyIdbot
 
 <!-- Other links -->
+[php]: https://secure.php.net/supported-versions.php
 [license]: LICENSE
+[composer]: https://getcomposer.org/
 [styleguide]: STYLEGUIDE.md
 [editorconfig]: http://editorconfig.org/#download
 

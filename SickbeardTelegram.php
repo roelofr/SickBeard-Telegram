@@ -2,7 +2,8 @@
 
 use Symfony\Component\Console\Application;
 use SickBeard\Telegram\Command\TelegramTest;
-use SickBeard\Telegram\Command\SickbeardTest;
+use SickBeard\Telegram\Command\SickBeardTest;
+use SickBeard\Telegram\Command\GlobalTest;
 use SickBeard\Telegram\Command\HandleNotification;
 
 // Include autoloader
@@ -31,6 +32,9 @@ if ($composerVersion !== null) {
     $app->setVersion($composerVersion);
 }
 
-// TODO Add commands
+// Tests
+$app->add(new TelegramTest);
+$app->add(new SickBeardTest);
+$app->add(new GlobalTest);
 
 $app->run();
