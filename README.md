@@ -2,7 +2,7 @@
 
 [![Build status][shield-build]][link-build]
 [![Code coverage][shield-cover]][link-cover]
-![PHP 5.5+][shield-php]
+[![PHP 5.6+][shield-php]][link-php]
 [![GPL-v3 license][shield-license]][license]
 
 Reports SickBeard downloads to you or a Telegram group using the Telegram Bot
@@ -10,7 +10,7 @@ API.
 
 ## Requirements
 
- - PHP 5.5 or higher
+ - PHP 5.6 or higher (5.5 and lower not officially supported)
  - Composer
  - cURL
 
@@ -91,12 +91,13 @@ those are often higher priority than new features.
 <!-- Shield images -->
 [shield-build]: https://img.shields.io/travis/roelofr/Sickbeard-Telegram.svg
 [shield-cover]: https://img.shields.io/coveralls/roelofr/Sickbeard-Telegram.svg
-[shield-php]: https://img.shields.io/badge/PHP-5.5%2B-8892BF.svg
+[shield-php]: https://img.shields.io/badge/PHP-5.6%2B-8892BF.svg
 [shield-license]: https://img.shields.io/github/license/roelofr/Sickbeard-Telegram.svg
 
 <!-- Shield links -->
-[link-build]: https://travis,org/roelofr/Sickbeard-Telegram
-[link-cover]: https://coveralls,com/github/roelofr/Sickbeard-Telegram
+[link-build]: https://travis-ci.org/roelofr/SickBeard-Telegram/settings
+[link-cover]: https://coveralls.io/github/roelofr/SickBeard-Telegram
+[link-php]: https://secure.php.net/supported-versions.php
 
 <!-- Telegram chats -->
 [@BotFather]: https://telegram.me/BotFather
